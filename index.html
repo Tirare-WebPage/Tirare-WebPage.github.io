@@ -59,6 +59,39 @@
           slam: ['Anton', 'Impact', 'system-ui'],
           mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
         },
+        .badge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  font-size: 12px;
+  color: #d4d4d4;
+
+  transition: all 0.2s ease;
+}
+
+.badge-chip img {
+  height: 18px;
+  filter: grayscale(100%) brightness(1.2);
+  opacity: 0.8;
+}
+
+.badge-chip:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+}
+
+.badge-chip:hover img {
+  filter: none;
+  opacity: 1;
+}
 
         /* =========================
            COLOR SYSTEM
@@ -372,94 +405,79 @@
 <main id="main" class="relative isolate">
   <div id="wheel" aria-hidden="true"></div>
 <!-- =========================
-     RECOGNITION (COMPRESSED)
+     RECOGNITION (ENGINEERED)
 ========================= -->
-<section class="px-6 md:px-10 py-20 bg-white border-t border-neutral-200">
+<section class="px-6 md:px-10 py-20 bg-neutral-950 text-white border-t border-neutral-800">
 
-  <div class="max-w-6xl mx-auto text-center">
+  <div class="max-w-6xl mx-auto">
 
-    <!-- Minimal Header -->
-    <p class="tech-label mb-4">
-      GLOBAL RECOGNITION
-    </p>
+    <!-- Header -->
+    <div class="mb-12">
+      <p class="text-[11px] tracking-widest uppercase text-neutral-500 mb-3">
+        External Validation
+      </p>
 
-    <h2 class="text-3xl md:text-5xl font-semibold text-ink-light">
-      Verified across <span class="text-blue-600">multiple sectors</span>
-    </h2>
+      <h2 class="text-3xl md:text-4xl font-semibold leading-tight">
+        Independent recognition across mobility,
+        logistics, and social infrastructure
+      </h2>
+    </div>
 
-    <!-- Subtle supporting line -->
-    <p class="mt-4 text-neutral-600 text-sm">
-      F6S · Independent startup discovery platform · 2026
-    </p>
+    <!-- Badges row -->
+    <div class="flex flex-wrap gap-4 items-center">
 
-    <!-- Badge Grid -->
-    <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-
-      <!-- F6S Badges -->
-      <a href="https://www.f6s.com/companies/electric-bike/mo" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Electric Bike · Feb 2026</p>
-        </div>
+      <!-- Badge -->
+      <a href="https://www.f6s.com/companies/electric-bike/mo" target="_blank" class="badge-chip">
+        <img src="/F6S_Top_Company.png" />
+        <span>Electric Bike · 2026</span>
       </a>
 
-      <a href="https://www.f6s.com/companies/poverty-reduction/india/co" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Poverty Reduction (India) · Mar 2026</p>
-        </div>
+      <a href="https://www.f6s.com/companies/sustainable-transport/mo" target="_blank" class="badge-chip">
+        <img src="/F6S_Top_Company.png" />
+        <span>Sustainable Transport</span>
       </a>
 
-      <a href="https://www.f6s.com/companies/logistics-supply-chain/india/nct/no" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Logistics (NCT) · 2026</p>
-        </div>
+      <a href="https://www.f6s.com/companies/logistics-supply-chain/india/nct/no" target="_blank" class="badge-chip">
+        <img src="/F6S_Top_Company.png" />
+        <span>Logistics · NCT</span>
       </a>
 
-      <a href="https://www.f6s.com/companies/social-enterprise/india/nct/new-delhi/co" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Social Enterprise (Delhi)</p>
-        </div>
+      <a href="https://www.f6s.com/companies/social-enterprise/india/nct/new-delhi/co" target="_blank" class="badge-chip">
+        <img src="/F6S_Top_Company.png" />
+        <span>Social Enterprise · Delhi</span>
       </a>
 
-      <a href="https://www.f6s.com/companies/sustainable-transport/mo" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Sustainable Transport · Feb 2026</p>
-        </div>
+      <a href="https://www.f6s.com/companies/manufacturing/india/nct/new-delhi/co" target="_blank" class="badge-chip">
+        <img src="/F6S_Top_Company.png" />
+        <span>Manufacturing · 2026</span>
       </a>
 
-      <a href="https://www.f6s.com/companies/transportation/india/nct/new-delhi/co" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Transportation (Delhi) · Mar 2026</p>
-        </div>
+      <a href="https://www.f6s.com/companies/poverty-reduction/mo" target="_blank" class="badge-chip">
+        <img src="/F6S_Top_Company.png" />
+        <span>Poverty Reduction</span>
       </a>
 
-      <a href="https://www.f6s.com/companies/manufacturing/india/nct/new-delhi/co" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Manufacturing (Delhi) · Mar 2026</p>
-        </div>
+      <a href="https://www.f6s.com/companies/transportation/india/nct/new-delhi/co" target="_blank" class="badge-chip">
+        <img src="/F6S_Top_Company.png" />
+        <span>Transportation · Delhi</span>
       </a>
 
-      <a href="https://www.f6s.com/companies/poverty-reduction/mo" target="_blank" class="group">
-        <div class="badge-card">
-          <img src="/F6S_Top_Company.png" />
-          <p class="badge-text">Global Poverty Reduction · Mar 2026</p>
-        </div>
-      </a>
+    </div>
 
-      <!-- E-Pitch Café (same visual weight) -->
-      <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7440326466078412800/" target="_blank" class="group md:col-span-2">
-        <div class="badge-card badge-highlight">
-          <img src="/track.jpeg" />
-          <p class="badge-text">
-            POC Track Winner · E-Pitch Café 2026 · IIIT Delhi
-          </p>
-        </div>
+    <!-- Divider -->
+    <div class="h-px bg-neutral-800 my-10"></div>
+
+    <!-- E-Pitch (inline, not screaming) -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+
+      <p class="text-neutral-300 text-sm">
+        POC Track Winner · E-Pitch Café 2026 · IIIT Delhi
+      </p>
+
+      <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7440326466078412800/" 
+         target="_blank"
+         class="text-sm text-blue-400 hover:text-blue-300 transition">
+        View proof →
       </a>
 
     </div>
