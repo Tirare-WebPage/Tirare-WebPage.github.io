@@ -1,0 +1,27 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export default function Stagger({ children }: Props) {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.12,
+          },
+        },
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
