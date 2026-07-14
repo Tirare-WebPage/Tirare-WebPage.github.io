@@ -1,22 +1,28 @@
 :root {
 
-    --background:#0A0A0A;
-    --surface:#141414;
-    --card:#1B1B1B;
+--background:#050505;
 
-    --border:#2C2C2C;
+--surface:#0d0d0d;
 
-    --foreground:#F5F5F3;
+--surface-2:#141414;
 
-    --muted:#B5B5B5;
+--text:#ffffff;
 
-    --subtle:#7A7A7A;
+--text-secondary:#a3a3a3;
 
-    --accent:#C8863B;
+--border:#262626;
 
-    --radius:20px;
+--accent:#3b82f6;
 
-    --content-width:1280px;
-    --text-width:720px;
+--radius-sm:8px;
+
+--radius-md:14px;
+
+--radius-lg:20px;
+
+--radius-xl:32px;
+
+--shadow-lg:
+0 30px 80px rgba(0,0,0,.45);
 
 }

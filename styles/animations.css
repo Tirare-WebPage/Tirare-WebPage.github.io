@@ -1,18 +1,22 @@
+*{
+
+scroll-behavior:smooth;
+
+}
+
 .fade-up{
 
 opacity:0;
 
-transform:translateY(30px);
+transform:translateY(40px);
 
 transition:
-
-opacity .8s cubic-bezier(.22,.61,.36,1),
-
-transform .8s cubic-bezier(.22,.61,.36,1);
+opacity .8s,
+transform .8s;
 
 }
 
-.fade-up.show{
+.fade-up.visible{
 
 opacity:1;
 
@@ -20,14 +24,12 @@ transform:none;
 
 }
 
-.hover-lift{
+.glass{
 
-transition:transform .45s cubic-bezier(.22,.61,.36,1);
+backdrop-filter:blur(20px);
 
-}
+background:rgba(255,255,255,.04);
 
-.hover-lift:hover{
-
-transform:translateY(-6px);
+border:1px solid rgba(255,255,255,.08);
 
 }

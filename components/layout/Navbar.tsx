@@ -1,43 +1,61 @@
 "use client";
 
-import Link from "next/link";
-
-const links = [
-  "Platform",
-  "Engineering",
-  "Technology",
-  "Validation",
-  "Roadmap",
-  "Founder",
-  "Contact",
-];
+import Logo from "../ui/Logo";
+import NavLink from "../ui/NavLink";
+import { navigation } from "@/data/navigation";
+import { useScroll } from "@/hooks/useScroll";
 
 export default function Navbar() {
+  const scrolled = useScroll();
+
   return (
-    <header className="fixed left-0 top-0 z-50 w-full">
-      <div className="mx-auto mt-6 flex max-w-[1280px] items-center justify-between rounded-full border border-zinc-800 bg-black/40 px-8 py-4 backdrop-blur-xl">
+    <header
+      className={`
+      fixed
+      top-0
+      left-0
+      right-0
+      z-50
+      transition-all
+      duration-500
 
-        <Link
-          href="/"
-          className="font-heading text-lg font-semibold tracking-tight"
+      ${
+        scrolled
+          ? "backdrop-blur-xl bg-black/50 border-b border-zinc-800"
+          : "bg-transparent"
+      }
+      `}
+    >
+      <div
+        className="
+        max-w-[1440px]
+        mx-auto
+        h-20
+        px-8
+
+        flex
+        items-center
+        justify-between
+        "
+      >
+        <Logo />
+
+        <nav
+          className="
+          flex
+          items-center
+          gap-10
+          "
         >
-          Tirare
-        </Link>
-
-        <nav className="hidden gap-8 md:flex">
-
-          {links.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm text-zinc-400 transition hover:text-white"
+          {navigation.map((item) => (
+            <NavLink
+              key={item.href}
+              href={item.href}
             >
-              {item}
-            </a>
+              {item.title}
+            </NavLink>
           ))}
-
         </nav>
-
       </div>
     </header>
   );
