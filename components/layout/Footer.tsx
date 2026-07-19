@@ -38,7 +38,7 @@ export function Footer({
             </Heading>
 
             <Paragraph
-              variant="sm"
+              size="sm"
               color="secondary"
               style={{
                 marginTop: theme.spacing.stack.sm,
@@ -58,11 +58,11 @@ export function Footer({
               gap: theme.spacing.stack.sm,
             }}
           >
-            <Paragraph variant="sm" color="tertiary">
+            <Paragraph size="sm" color="tertiary">
               © {year} {companyName}
             </Paragraph>
 
-            <Paragraph variant="sm" color="tertiary">
+            <Paragraph size="sm" color="tertiary">
               Built with engineering discipline.
             </Paragraph>
           </div>
