@@ -1,28 +1,180 @@
+/*
+|--------------------------------------------------------------------------
+| Tirare Mobility Technologies
+| Design System — CSS Variables
+|--------------------------------------------------------------------------
+|
+| This file mirrors the TypeScript design tokens.
+|
+| CSS must never introduce its own visual values.
+| All styling should reference these semantic variables.
+|
+| Example:
+|
+| ✓ color: var(--color-text-primary);
+| ✗ color: #F5F7F8;
+|
+|--------------------------------------------------------------------------*/
+
 :root {
+  /* -----------------------------------------------------------------------
+   * Colors
+   * --------------------------------------------------------------------- */
 
---background:#050505;
+  /* Backgrounds */
+  --color-background-primary: #0b0d0f;
+  --color-background-secondary: #111417;
+  --color-background-tertiary: #181c20;
 
---surface:#0d0d0d;
+  /* Surfaces */
+  --color-surface-primary: #14181c;
+  --color-surface-secondary: #1a1f24;
+  --color-surface-tertiary: #232a31;
+  --color-surface-elevated: #2b333b;
 
---surface-2:#141414;
+  /* Text */
+  --color-text-primary: #f5f7f8;
+  --color-text-secondary: #c8d0d6;
+  --color-text-tertiary: #98a4ae;
+  --color-text-disabled: #68737c;
+  --color-text-inverse: #0b0d0f;
 
---text:#ffffff;
+  /* Borders */
+  --color-border-subtle: #232a31;
+  --color-border-default: #323b45;
+  --color-border-strong: #46515d;
 
---text-secondary:#a3a3a3;
+  /* Accent */
+  --color-accent-primary: #4f8ef7;
+  --color-accent-secondary: #79a8f8;
+  --color-accent-muted: #345e9e;
+  --color-accent-contrast: #ffffff;
 
---border:#262626;
+  /* Engineering */
+  --color-engineering-blueprint: #3d6fb6;
+  --color-engineering-steel: #708090;
+  --color-engineering-titanium: #a9b4bf;
+  --color-engineering-copper: #b87333;
 
---accent:#3b82f6;
+  /* Status */
+  --color-success: #2e8b57;
+  --color-warning: #d4a017;
+  --color-danger: #b94a48;
+  --color-info: #4f8ef7;
 
---radius-sm:8px;
+  /* CAD */
+  --color-cad-background: #090b0c;
+  --color-cad-ground: #111417;
+  --color-cad-wireframe: #54616d;
+  --color-cad-highlight: #79a8f8;
+  --color-cad-annotation: #f5f7f8;
+  --color-cad-protected: #4a4f56;
 
---radius-md:14px;
+  /* Overlay */
+  --color-overlay-backdrop: rgba(11, 13, 15, 0.72);
+  --color-overlay-modal: rgba(20, 24, 28, 0.96);
+  --color-overlay-tooltip: rgba(17, 20, 23, 0.94);
 
---radius-lg:20px;
+  /* -----------------------------------------------------------------------
+   * Typography
+   * --------------------------------------------------------------------- */
 
---radius-xl:32px;
+  --font-family-sans:
+    Geist,
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 
---shadow-lg:
-0 30px 80px rgba(0,0,0,.45);
+  --font-family-mono:
+    "Geist Mono",
+    "SFMono-Regular",
+    Consolas,
+    Menlo,
+    monospace;
 
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* -----------------------------------------------------------------------
+   * Spacing Scale
+   * --------------------------------------------------------------------- */
+
+  --space-0: 0rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-11: 10rem;
+  --space-12: 12rem;
+
+  /* Layout */
+
+  --container-narrow: 42rem;
+  --container-content: 72rem;
+  --container-wide: 90rem;
+
+  --section-spacing-compact: 4rem;
+  --section-spacing-default: 8rem;
+  --section-spacing-spacious: 12rem;
+
+  /* -----------------------------------------------------------------------
+   * Radius
+   * --------------------------------------------------------------------- */
+
+  --radius-none: 0;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* -----------------------------------------------------------------------
+   * Motion
+   * --------------------------------------------------------------------- */
+
+  --duration-fast: 120ms;
+  --duration-normal: 220ms;
+  --duration-medium: 320ms;
+  --duration-slow: 450ms;
+  --duration-deliberate: 700ms;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-mechanical: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* -----------------------------------------------------------------------
+   * Layers
+   * --------------------------------------------------------------------- */
+
+  --z-background: -1;
+  --z-default: 0;
+  --z-elevated: 10;
+  --z-sticky: 100;
+  --z-navigation: 500;
+  --z-tooltip: 700;
+  --z-modal-backdrop: 900;
+  --z-modal: 1000;
+  --z-notification: 1100;
+
+  /* -----------------------------------------------------------------------
+   * Accessibility
+   * --------------------------------------------------------------------- */
+
+  --focus-ring-width: 2px;
+  --minimum-touch-target: 44px;
+  --maximum-reading-width: 75ch;
 }

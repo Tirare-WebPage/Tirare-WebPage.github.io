@@ -1,31 +1,43 @@
-.section{
-
-padding:120px 0;
-
-}
-
 .container{
 
-max-width:1280px;
+width:min(92%,1280px);
 
 margin:auto;
 
-padding-inline:32px;
+}
+
+.section{
+
+padding:160px 0;
 
 }
 
-.text-container{
+.center{
 
-max-width:720px;
+display:flex;
+
+justify-content:center;
+
+align-items:center;
 
 }
 
-.divider{
+.grid2{
 
-height:1px;
+display:grid;
 
-background:#2C2C2C;
+grid-template-columns:1fr 1fr;
 
-margin:120px auto;
+gap:80px;
+
+}
+
+@media(max-width:900px){
+
+.grid2{
+
+grid-template-columns:1fr;
+
+}
 
 }

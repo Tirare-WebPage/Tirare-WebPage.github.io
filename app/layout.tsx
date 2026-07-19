@@ -1,39 +1,119 @@
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import "@/app/globals.css";
 
-import { Inter } from "next/font/google";
-import { Space_Grotesk } from "next/font/google";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
-const inter = Inter({
+const geistSans = Geist({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-geist-sans",
 });
 
-const grotesk = Space_Grotesk({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-geist-mono",
 });
+
+export const metadata: Metadata = {
+  title: {
+    default: "Tirare Mobility Technologies",
+    template: "%s | Tirare Mobility Technologies",
+  },
+
+  description:
+    "Engineering retrofit systems that preserve existing cargo tricycles while introducing practical electric torque assistance.",
+
+  applicationName: "Tirare Mobility Technologies",
+
+  keywords: [
+    "Tirare",
+    "Mobility",
+    "Cargo Tricycle",
+    "Retrofit",
+    "Electric Assist",
+    "Engineering",
+    "Urban Mobility",
+    "Mechanical Engineering",
+    "India",
+  ],
+
+  authors: [
+    {
+      name: "Tirare Mobility Technologies",
+    },
+  ],
+
+  creator: "Tirare Mobility Technologies",
+
+  publisher: "Tirare Mobility Technologies",
+
+  metadataBase: new URL("https://tirare.tech"),
+
+  openGraph: {
+    title: "Tirare Mobility Technologies",
+
+    description:
+      "Engineering retrofit systems for cargo mobility.",
+
+    url: "https://tirare.tech",
+
+    siteName: "Tirare Mobility Technologies",
+
+    locale: "en_US",
+
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Tirare Mobility Technologies",
+
+    description:
+      "Engineering retrofit systems for cargo mobility.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0B0D0F",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+};
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: RootLayoutProps) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${grotesk.variable}`}
+      suppressHydrationWarning
     >
-      <body className="bg-[#0A0A0A] text-[#F5F5F3]">
-
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+      >
         <Navbar />
 
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
 
         <Footer />
-
       </body>
     </html>
   );

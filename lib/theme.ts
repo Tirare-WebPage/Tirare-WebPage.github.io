@@ -1,50 +1,101 @@
+/**
+ * -----------------------------------------------------------------------------
+ * Tirare Mobility Technologies
+ * Design System Theme
+ * -----------------------------------------------------------------------------
+ *
+ * This module is the single public entry point for the design system.
+ *
+ * Components should always import from:
+ *
+ *   import { theme } from "@/lib/theme";
+ *
+ * Never import individual token modules directly inside application
+ * components. Keeping a single public API allows the internal structure
+ * of the design system to evolve without affecting the rest of the codebase.
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+import colors from "./colors";
+import spacing from "./spacing";
+import typography from "./typography";
+import constants, {
+  accessibility,
+  blur,
+  breakpoints,
+  cad,
+  duration,
+  easing,
+  layout,
+  opacity,
+  radius,
+  zIndex,
+} from "./constants";
+
+/**
+ * Canonical design system.
+ *
+ * All visual decisions originate from this object.
+ */
 export const theme = {
-  colors: {
-    background: "#050505",
-    surface: "#0D0D0D",
-    elevated: "#141414",
+  colors,
 
-    text: {
-      primary: "#FFFFFF",
-      secondary: "#A3A3A3",
-      muted: "#6B7280",
-    },
+  spacing,
 
-    accent: {
-      primary: "#3B82F6",
-      hover: "#2563EB",
-      subtle: "#1E293B",
-    },
+  typography,
 
-    border: "#262626",
+  breakpoints,
 
-    success: "#22C55E",
-    warning: "#F59E0B",
-    danger: "#EF4444",
+  layout,
+
+  radius,
+
+  zIndex,
+
+  motion: {
+    duration,
+
+    easing,
   },
 
-  radius: {
-    sm: "8px",
-    md: "14px",
-    lg: "20px",
-    xl: "32px",
+  effects: {
+    blur,
+
+    opacity,
   },
 
-  shadow: {
-    sm: "0 4px 10px rgba(0,0,0,.2)",
-    md: "0 10px 30px rgba(0,0,0,.35)",
-    lg: "0 30px 80px rgba(0,0,0,.5)",
-  },
+  cad,
 
-  animation: {
-    fast: 150,
-    normal: 300,
-    slow: 600,
-    cinematic: 1000,
-  },
+  accessibility,
+} as const;
 
-  container: {
-    max: "1440px",
-    padding: "2rem",
-  },
+/**
+ * Full theme type.
+ */
+export type Theme = typeof theme;
+
+/**
+ * Re-export individual namespaces for advanced usage.
+ *
+ * Most components should consume `theme`.
+ * Individual exports exist primarily for infrastructure and tooling.
+ */
+export {
+  colors,
+  spacing,
+  typography,
+  breakpoints,
+  layout,
+  radius,
+  zIndex,
+  duration,
+  easing,
+  blur,
+  opacity,
+  cad,
+  accessibility,
+  constants,
 };
+
+export default theme;
