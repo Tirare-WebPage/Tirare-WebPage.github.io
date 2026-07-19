@@ -80,7 +80,7 @@ export function Counter({
     autoplay ? start : value
   );
 
-  const frame = useRef<number>();
+  const frame = useRef<number | null>(null);
 
   useEffect(() => {
     if (!autoplay) {
@@ -116,7 +116,7 @@ export function Counter({
     );
 
     return () => {
-      if (frame.current) {
+      if (frame.current !== null) {
         cancelAnimationFrame(frame.current);
       }
     };
