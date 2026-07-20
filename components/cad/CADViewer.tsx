@@ -5,9 +5,20 @@ import { Suspense } from 'react';
 
 import Scene from './Scene';
 
-export default function CADViewer() {
+interface CADViewerProps {
+  modelPath: string;
+}
+
+export default function CADViewer({
+  modelPath,
+}: CADViewerProps) {
   return (
-    <div className="w-full h-screen bg-black">
+    <div
+      style={{
+        width: '100%',
+        height: '420px',
+      }}
+    >
       <Canvas
         shadows
         camera={{
@@ -16,7 +27,7 @@ export default function CADViewer() {
         }}
       >
         <Suspense fallback={null}>
-          <Scene />
+          <Scene modelPath={modelPath} />
         </Suspense>
       </Canvas>
     </div>

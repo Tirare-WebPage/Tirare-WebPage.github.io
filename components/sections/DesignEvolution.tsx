@@ -15,7 +15,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Stagger } from "@/components/motion/Stagger";
 
 import { theme } from "@/lib/theme";
-
+import CADViewer from "@/components/cad/CADViewer";
 export function DesignEvolution() {
   return (
     <Section
@@ -184,18 +184,9 @@ style={{
     minHeight: "320px",
   }}
 >
-                <Image
-                  src="/images/rejected-concept-1.png"
-                  alt="Rejected architecture"
-                  width={1600}
-                  height={1200}
-style={{
-  width: "100%",
-  height: "auto",
-  display: "block",
-  objectFit: "contain",
-}}
-                />
+<CADViewer
+  modelPath="/cad/evolution/precision-drive.glb"
+/>
               </Card>
             </Reveal>
           </Grid>
@@ -220,18 +211,9 @@ style={{
     minHeight: "320px",
   }}
 >
-                <Image
-                  src="/images/rejected-concept-2.png"
-                  alt="Rejected architecture"
-                  width={1600}
-                  height={1200}
-style={{
-  width: "100%",
-  height: "auto",
-  display: "block",
-  objectFit: "contain",
-}}
-                />
+<CADViewer
+  modelPath="/cad/evolution/direct-motor-drive.glb"
+/>
               </Card>
             </Reveal>
 

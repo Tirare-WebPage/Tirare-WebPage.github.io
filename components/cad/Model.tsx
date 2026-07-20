@@ -6,11 +6,17 @@ import { useGLTF } from '@react-three/drei';
 
 import * as THREE from 'three';
 
-export default function Model() {
+interface ModelProps {
+  modelPath: string;
+}
+
+export default function Model({
+  modelPath,
+}: ModelProps) {
 
   const group = useRef<THREE.Group>(null);
 
-  const { scene } = useGLTF('/cad/current/tirare.glb');
+  const { scene } = useGLTF(modelPath);
 
   useFrame((_, delta) => {
     if (!group.current) return;
@@ -20,14 +26,10 @@ export default function Model() {
 
   return (
     <group ref={group}>
-
       <primitive
         object={scene}
         scale={1}
       />
-
     </group>
   );
 }
-
-useGLTF.preload('/cad/current/tirare.glb');
