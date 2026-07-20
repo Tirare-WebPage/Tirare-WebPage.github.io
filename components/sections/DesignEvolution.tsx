@@ -82,19 +82,10 @@ export function DesignEvolution() {
     minHeight: "320px",
   }}
 >
-                <Image
-                  src="/images/cad-exploded.png"
-                  alt="Existing cargo tricycle"
-                  width={1600}
-                  height={1200}
-style={{
-  width: "100%",
-  height: "auto",
-  display: "block",
-  objectFit: "contain",
-}}
-                />
-              </Card>
+  <CADViewer
+    modelPath="/cad/evolution/generic-trike.glb"
+  />
+</Card>
             </Reveal>
 
             <Reveal>
@@ -310,19 +301,10 @@ style={{
     minHeight: "320px",
   }}
 >
-                <Image
-                  src="/images/cad-main.png"
-                  alt="Current Tirare architecture"
-                  width={1600}
-                  height={1200}
-style={{
-  width: "100%",
-  height: "auto",
-  display: "block",
-  objectFit: "contain",
-}}
-                />
-              </Card>
+  <CADViewer
+    modelPath="/cad/evolution/tirare.glb"
+  />
+</Card>
             </Reveal>
           </Grid>
         </div>
