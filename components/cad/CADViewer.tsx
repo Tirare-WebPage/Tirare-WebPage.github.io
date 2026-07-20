@@ -2,6 +2,7 @@
 
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
+import { OrbitControls } from '@react-three/drei';
 
 import Scene from './Scene';
 
@@ -22,13 +23,24 @@ export default function CADViewer({
       <Canvas
         shadows
         camera={{
-          position: [3, 2, 6],
-          fov: 35,
+          position: [0, 1.5, 12],
+          fov: 45,
         }}
       >
         <Suspense fallback={null}>
           <Scene modelPath={modelPath} />
         </Suspense>
+
+<OrbitControls
+  target={[0, 0, 0]}
+  enablePan={false}
+  enableZoom={true}
+  enableRotate={true}
+  autoRotate={false}
+  minDistance={2}
+  maxDistance={20}
+  makeDefault
+/>
       </Canvas>
     </div>
   );

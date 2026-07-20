@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useMemo } from 'react';
 import { useGLTF } from '@react-three/drei';
 
 import * as THREE from 'three';
@@ -14,22 +13,33 @@ export default function Model({
   modelPath,
 }: ModelProps) {
 
-  const group = useRef<THREE.Group>(null);
-
   const { scene } = useGLTF(modelPath);
 
-  useFrame((_, delta) => {
-    if (!group.current) return;
+  const processedScene = useMemo(() => {
 
-    group.current.rotation.y += delta * 0.15;
-  });
+    const clonedScene = scene.clone(true);
+
+    clonedScene.scale.setScalar(0.05);
+
+    const box = new THREE.Box3().setFromObject(
+      clonedScene
+    );
+
+    const center = box.getCenter(
+      new THREE.Vector3()
+    );
+
+    clonedScene.position.set(
+      -center.x,
+      -center.y,
+      -center.z
+    );
+
+    return clonedScene;
+
+  }, [scene]);
 
   return (
-    <group ref={group}>
-      <primitive
-        object={scene}
-        scale={1}
-      />
-    </group>
+    <primitive object={processedScene} />
   );
 }
