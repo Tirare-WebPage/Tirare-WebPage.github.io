@@ -19,7 +19,7 @@ export default function Model({
 
     const clonedScene = scene.clone(true);
 
-    clonedScene.scale.setScalar(0.05);
+    clonedScene.scale.setScalar(0.03);
 
     const box = new THREE.Box3().setFromObject(
       clonedScene
