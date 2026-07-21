@@ -289,7 +289,7 @@ Physical capability declines long before economic necessity does.
                 }}
               >
                 <Image
-                  src="/images/old-driver1.jpg"
+                  src="/images/old-driver.jpg"
                   alt="Elderly tricycle operator"
                   width={1200}
                   height={900}

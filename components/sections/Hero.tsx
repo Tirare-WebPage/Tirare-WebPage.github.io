@@ -40,6 +40,7 @@ export function Hero() {
           gap="spacious"
           align="center"
         >
+          {/* LEFT SIDE */}
           <Stagger>
             <Reveal>
               <Badge variant="engineering">
@@ -105,7 +106,7 @@ export function Hero() {
                 Tirare is developing a new category of
                 human-amplification mobility systems built
                 around the Mechanical Rider Intent Interface
-                (MRII) ~ an architecture that allows human
+                (MRII) an architecture that allows human
                 effort and electric assistance to operate as
                 one integrated system.
               </Paragraph>
@@ -124,41 +125,91 @@ export function Hero() {
                   Explore Architecture
                 </Button>
 
-                <Button variant="secondary">
-                  View Engineering
-                </Button>
+<a
+  href="/documents/tirare-pitch-deck.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    textDecoration: "none",
+  }}
+>
+  <Button variant="secondary">
+    View Pitch Deck
+  </Button>
+</a>
               </div>
             </Reveal>
           </Stagger>
 
+          {/* RIGHT SIDE */}
           <Reveal>
-            <Card
-              padding="none"
-              variant="surface"
-              style={{
-                overflow: "hidden",
-              }}
-            >
-              <video
-                controls
-                playsInline
-                poster="/images/founder-photo.jpg"
+            <div>
+              <Card
+                padding="none"
+                variant="surface"
                 style={{
-                  width: "100%",
-                  display: "block",
-                  aspectRatio: "16 / 9",
-                  objectFit: "cover",
+                  overflow: "hidden",
                 }}
               >
-                <source
-                  src="/videos/founder-story.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </Card>
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="/images/founder-photo.jpg"
+                  style={{
+                    width: "100%",
+                    display: "block",
+                    aspectRatio: "16 / 9",
+                    objectFit: "cover",
+                  }}
+                >
+                  <source
+                    src="/videos/founder-story.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </Card>
+
+              <Paragraph
+                style={{
+                  textAlign: "center",
+                  marginTop: "1rem",
+                  fontSize: "0.95rem",
+                  fontWeight: 600,
+                }}
+              >
+                ▶ Watch the 3-minute founder story behind Tirare.
+              </Paragraph>
+
+              <div
+                style={{
+                  marginTop: "1rem",
+                }}
+              >
+<a
+  href="/documents/tirare-pitch-deck.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "block",
+    textDecoration: "none",
+  }}
+>
+  <Button
+    variant="secondary"
+    style={{
+      width: "100%",
+    }}
+  >
+    Open Pitch Deck
+  </Button>
+</a>
+              </div>
+            </div>
           </Reveal>
         </Grid>
 
+        {/* METRICS */}
         <div
           style={{
             marginTop: theme.spacing.section.default,
@@ -174,8 +225,8 @@ export function Hero() {
             />
 
             <Statistic
-              value="96"
-              label="Engineering PoC Pages"
+              value="Prototype"
+              label="Functional Prototype"
             />
 
             <Statistic
@@ -190,6 +241,7 @@ export function Hero() {
           </Grid>
         </div>
 
+        {/* PHILOSOPHY */}
         <Reveal>
           <div
             style={{
