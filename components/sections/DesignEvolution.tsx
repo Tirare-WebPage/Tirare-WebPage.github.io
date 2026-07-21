@@ -72,20 +72,33 @@ export function DesignEvolution() {
         >
           <Grid columns={2} gap="spacious">
             <Reveal>
-<Card
-  padding="none"
-  style={{
-    overflow: "hidden",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "320px",
-  }}
->
-  <CADViewer
-    modelPath="/cad/evolution/generic-trike.glb"
-  />
-</Card>
+              <div>
+                <Card
+                  padding="none"
+                  style={{
+                    overflow: "hidden",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minHeight: "320px",
+                  }}
+                >
+                  <CADViewer
+                    modelPath="/cad/evolution/generic-trike.glb"
+                  />
+                </Card>
+
+                <Paragraph
+                  style={{
+                    textAlign: "center",
+                    marginTop: "0.75rem",
+                    fontSize: "0.9rem",
+                    color: theme.colors.text.secondary,
+                  }}
+                >
+                  Interactive Engineering Model • Drag to explore
+                </Paragraph>
+              </div>
             </Reveal>
 
             <Reveal>
@@ -165,20 +178,33 @@ export function DesignEvolution() {
             </Reveal>
 
             <Reveal>
-<Card
-  padding="none"
-  style={{
-    overflow: "hidden",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "320px",
-  }}
->
-<CADViewer
-  modelPath="/cad/evolution/precision-drive.glb"
-/>
-              </Card>
+              <div>
+                <Card
+                  padding="none"
+                  style={{
+                    overflow: "hidden",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minHeight: "320px",
+                  }}
+                >
+                  <CADViewer
+                    modelPath="/cad/evolution/precision-drive.glb"
+                  />
+                </Card>
+
+                <Paragraph
+                  style={{
+                    textAlign: "center",
+                    marginTop: "0.75rem",
+                    fontSize: "0.9rem",
+                    color: theme.colors.text.secondary,
+                  }}
+                >
+                  Interactive Engineering Model • Drag to explore
+                </Paragraph>
+              </div>
             </Reveal>
           </Grid>
         </div>
@@ -192,20 +218,33 @@ export function DesignEvolution() {
         >
           <Grid columns={2} gap="spacious">
             <Reveal>
-<Card
-  padding="none"
-  style={{
-    overflow: "hidden",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "320px",
-  }}
->
-<CADViewer
-  modelPath="/cad/evolution/direct-motor-drive.glb"
-/>
-              </Card>
+              <div>
+                <Card
+                  padding="none"
+                  style={{
+                    overflow: "hidden",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minHeight: "320px",
+                  }}
+                >
+                  <CADViewer
+                    modelPath="/cad/evolution/direct-motor-drive.glb"
+                  />
+                </Card>
+
+                <Paragraph
+                  style={{
+                    textAlign: "center",
+                    marginTop: "0.75rem",
+                    fontSize: "0.9rem",
+                    color: theme.colors.text.secondary,
+                  }}
+                >
+                  Interactive Engineering Model • Drag to explore
+                </Paragraph>
+              </div>
             </Reveal>
 
             <Reveal>
@@ -291,20 +330,33 @@ export function DesignEvolution() {
             </Reveal>
 
             <Reveal>
-<Card
-  padding="none"
-  style={{
-    overflow: "hidden",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    minHeight: "320px",
-  }}
->
-  <CADViewer
-    modelPath="/cad/evolution/tirare.glb"
-  />
-</Card>
+              <div>
+                <Card
+                  padding="none"
+                  style={{
+                    overflow: "hidden",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minHeight: "320px",
+                  }}
+                >
+                  <CADViewer
+                    modelPath="/cad/evolution/tirare.glb"
+                  />
+                </Card>
+
+                <Paragraph
+                  style={{
+                    textAlign: "center",
+                    marginTop: "0.75rem",
+                    fontSize: "0.9rem",
+                    color: theme.colors.text.secondary,
+                  }}
+                >
+                  Interactive Engineering Model • Drag to explore
+                </Paragraph>
+              </div>
             </Reveal>
           </Grid>
         </div>

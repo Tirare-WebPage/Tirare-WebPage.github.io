@@ -121,9 +121,6 @@ export function Hero() {
                   marginTop: theme.spacing.stack.lg,
                 }}
               >
-                <Button>
-                  Explore Architecture
-                </Button>
 
 <a
   href="/documents/tirare-pitch-deck.pdf"

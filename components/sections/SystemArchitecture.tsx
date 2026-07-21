@@ -130,28 +130,49 @@ export function SystemArchitecture() {
             columns={2}
             gap="spacious"
           >
-            <Reveal>
-              <Card
-                padding="none"
-                variant="elevated"
-                style={{
-                  overflow: "hidden",
-                }}
-              >
-                <Image
-                  src="/images/cad-main.png"
-                  alt="Tirare platform architecture"
-                  width={1800}
-                  height={1200}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                    display: "block",
-                  }}
-                />
-              </Card>
-            </Reveal>
+<Reveal>
+  <div>
+    <Card
+      padding="none"
+      variant="elevated"
+      style={{
+        overflow: "hidden",
+      }}
+    >
+      <video
+        controls
+        playsInline
+        loop
+        muted
+        style={{
+          width: "100%",
+          display: "block",
+          aspectRatio: "16 / 9",
+          objectFit: "contain",
+          background: "#050505",
+        }}
+      >
+        <source
+          src="/videos/mechanism-animation.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </Card>
+
+    <Paragraph
+      style={{
+        textAlign: "center",
+        marginTop: "1rem",
+        fontSize: "0.95rem",
+        color: theme.colors.text.secondary,
+      }}
+    >
+      ▶ Animation showing Tirare's assistive drivetrain
+      architecture, where human effort and electric
+      assistance contribute torque simultaneously.
+    </Paragraph>
+  </div>
+</Reveal>
 
             <Reveal>
               <Card variant="elevated">
