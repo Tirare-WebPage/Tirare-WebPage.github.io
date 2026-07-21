@@ -46,11 +46,11 @@ export function Problem() {
                 color: theme.colors.text.secondary,
               }}
             >
-              One afternoon, a cargo tricycle was still moving
-              goods despite a broken pedal.
-              The rider was not working because the vehicle was
-              reliable.
-              He was working because stopping was not an option.
+One afternoon, a cargo tricycle was still moving goods despite a broken pedal.
+The vehicle was no longer functioning as intended.
+The rider continued working anyway.
+Not because the vehicle was reliable.
+Because stopping work carried a greater cost than operating a damaged machine.
             </Paragraph>
           </Reveal>
         </Stagger>
@@ -124,9 +124,11 @@ export function Problem() {
                 </Paragraph>
 
                 <Paragraph>
-                  Replacing it required money.
-                  Repair required downtime.
-                  Both created risk.
+The vehicle was still producing income.
+Repair required money.
+Replacement required even more.
+Downtime meant lost earnings.
+For the operator, a partially functioning vehicle was often less dangerous than losing a day's work.
                 </Paragraph>
 
                 <Paragraph>
@@ -177,11 +179,15 @@ export function Problem() {
                 </Heading>
 
                 <Paragraph>
-                  This was not a laboratory problem.
+This observation changed the engineering question entirely.
+The challenge was not how to electrify a vehicle.
+The challenge was understanding why operators continued relying on machines that many product designers would immediately replace.
+The answer was rarely technical.
                 </Paragraph>
 
                 <Paragraph>
-                  It was visible in daily operation.
+It was economic.
+Any solution that ignored that reality would fail long before the first component failed.
                 </Paragraph>
 
                 <Paragraph>
@@ -244,10 +250,11 @@ export function Problem() {
               </Paragraph>
 
               <Paragraph>
-                Some struggle with chronic health conditions.
-                Some suffer from declining strength.
-                Some carry years of physical wear in their backs,
-                knees, shoulders and hands.
+Years of repetitive work accumulate in the body.
+Knees deteriorate.
+Shoulders weaken.
+Backs carry decades of strain.
+Physical capability declines long before economic necessity does.
               </Paragraph>
 
               <Paragraph
@@ -282,7 +289,7 @@ export function Problem() {
                 }}
               >
                 <Image
-                  src="/images/old-driver.jpg"
+                  src="/images/old-driver1.jpg"
                   alt="Elderly tricycle operator"
                   width={1200}
                   height={900}
@@ -303,8 +310,8 @@ export function Problem() {
                 </Heading>
 
                 <Paragraph>
-                  Most electric mobility solutions begin with
-                  the same assumption:
+Most electrification strategies begin from the perspective of the vehicle.
+The operator is expected to adapt.
                 </Paragraph>
 
                 <Paragraph>
