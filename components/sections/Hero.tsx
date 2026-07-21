@@ -112,100 +112,133 @@ export function Hero() {
               </Paragraph>
             </Reveal>
 
-            <Reveal>
-              <div
-                style={{
-                  display: "flex",
-                  gap: theme.spacing.stack.md,
-                  flexWrap: "wrap",
-                  marginTop: theme.spacing.stack.lg,
-                }}
-              >
-
-<a
-  href="/documents/tirare-pitch-deck.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    textDecoration: "none",
-  }}
->
-  <Button variant="secondary">
-    View Pitch Deck
-  </Button>
-</a>
-              </div>
-            </Reveal>
-          </Stagger>
-
-          {/* RIGHT SIDE */}
-          <Reveal>
-            <div>
-              <Card
-                padding="none"
-                variant="surface"
-                style={{
-                  overflow: "hidden",
-                }}
-              >
-                <video
-                  controls
-                  playsInline
-                  preload="metadata"
-                  poster="/images/founder-photo.jpg"
-                  style={{
-                    width: "100%",
-                    display: "block",
-                    aspectRatio: "16 / 9",
-                    objectFit: "cover",
-                  }}
-                >
-                  <source
-                    src="/videos/founder-story.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </Card>
-
-              <Paragraph
-                style={{
-                  textAlign: "center",
-                  marginTop: "1rem",
-                  fontSize: "0.95rem",
-                  fontWeight: 600,
-                }}
-              >
-                ▶ Watch the 3-minute founder story behind Tirare.
-              </Paragraph>
-
-              <div
-                style={{
-                  marginTop: "1rem",
-                }}
-              >
-<a
-  href="/documents/tirare-pitch-deck.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    display: "block",
-    textDecoration: "none",
-  }}
->
-  <Button
-    variant="secondary"
+<Reveal>
+  <div
     style={{
-      width: "100%",
+      marginTop: theme.spacing.stack.lg,
+      padding: "1.25rem",
+      border: `1px solid ${theme.colors.border.subtle}`,
+      borderRadius: "16px",
+      maxWidth: "40rem",
     }}
   >
-    Open Pitch Deck
-  </Button>
-</a>
-              </div>
-            </div>
-          </Reveal>
-        </Grid>
+    <Paragraph
+      style={{
+        fontSize: "0.95rem",
+        fontWeight: 600,
+        marginBottom: "0.5rem",
+      }}
+    >
+      Want the complete story?
+    </Paragraph>
 
+    <Paragraph
+      style={{
+        color: theme.colors.text.secondary,
+        marginBottom: "1rem",
+      }}
+    >
+      Explore the engineering architecture, grant-backed
+      development, validation strategy, market analysis,
+      deployment roadmap and future vision behind Tirare.
+    </Paragraph>
+
+    <a
+      href="/documents/tirare-pitch-deck.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        textDecoration: "none",
+      }}
+    >
+      <Button>
+        View Technical & Investment Deck
+      </Button>
+    </a>
+  </div>
+</Reveal>
+</Stagger>
+
+{/* RIGHT SIDE */}
+<Reveal>
+  <div>
+    <Card
+      padding="none"
+      variant="surface"
+      style={{
+        overflow: "hidden",
+      }}
+    >
+      <video
+        controls
+        playsInline
+        preload="metadata"
+        poster="/images/founder-photo.jpg"
+        style={{
+          width: "100%",
+          display: "block",
+          aspectRatio: "16 / 9",
+          objectFit: "cover",
+        }}
+      >
+        <source
+          src="/videos/founder-story.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </Card>
+
+    <Paragraph
+      style={{
+        textAlign: "center",
+        marginTop: "1rem",
+        fontSize: "0.95rem",
+        fontWeight: 600,
+      }}
+    >
+      ▶ Watch the 3-minute founder story behind Tirare.
+    </Paragraph>
+
+    <Paragraph
+      style={{
+        textAlign: "center",
+        marginTop: "0.5rem",
+        color: theme.colors.text.secondary,
+        maxWidth: "32rem",
+        marginInline: "auto",
+      }}
+    >
+      Prefer slides over videos? The complete project deck
+      is available below.
+    </Paragraph>
+
+    <div
+      style={{
+        marginTop: "1rem",
+      }}
+    >
+      <a
+        href="/documents/tirare-pitch-deck.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "block",
+          textDecoration: "none",
+        }}
+      >
+        <Button
+          variant="secondary"
+          style={{
+            width: "100%",
+          }}
+        >
+          View Technical & Investment Deck
+        </Button>
+      </a>
+    </div>
+  </div>
+</Reveal>
+</Grid>
         {/* METRICS */}
         <div
           style={{

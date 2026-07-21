@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { Heading } from "@/components/ui/Heading";
 import { Paragraph } from "@/components/ui/Paragraph";
-import { Button } from "@/components/ui/Button";
 
 import { Reveal } from "@/components/motion/Reveal";
 import { Stagger } from "@/components/motion/Stagger";
@@ -39,6 +38,7 @@ export function Contact() {
             >
               <Heading level={2}>
                 The Work Has Only
+                <br />
                 Just Begun.
               </Heading>
 
@@ -52,31 +52,73 @@ export function Contact() {
                 }}
               >
                 Tirare is currently advancing through
-                engineering development, validation and
+                engineering development, validation,
+                intellectual property protection and
                 deployment planning.
               </Paragraph>
 
               <Paragraph
                 style={{
                   marginTop: "1rem",
+                  maxWidth: "50rem",
+                  marginInline: "auto",
                 }}
               >
                 We welcome conversations with engineers,
-                researchers, manufacturers, institutions
-                and organizations interested in mobility,
-                accessibility and human-centered engineering.
+                manufacturers, researchers, institutions,
+                mobility organizations, grant programs and
+                potential collaborators interested in
+                human-centered transportation systems.
               </Paragraph>
 
               <div
                 style={{
-                  marginTop: "2rem",
+                  marginTop: "3rem",
                   display: "flex",
-                  justifyContent: "center",
+                  flexDirection: "column",
+                  gap: "1rem",
+                  alignItems: "center",
                 }}
               >
-                <Button>
-                  Contact Tirare
-                </Button>
+                <Paragraph
+                  style={{
+                    fontWeight: 700,
+                    fontSize: "1.1rem",
+                  }}
+                >
+                  Anurag Mishra
+                </Paragraph>
+
+                <Paragraph>
+                  Founder
+                  <br />
+                  Tirare Mobility Technologies Pvt. Ltd.
+                </Paragraph>
+
+                <Paragraph>
+                  📧 anuragfromtirare@gmail.com
+                </Paragraph>
+
+                <Paragraph>
+                  📞 +91 96506 10688
+                </Paragraph>
+
+                <Paragraph>
+                  🔗 LinkedIn
+                </Paragraph>
+
+                <a
+                  href="https://www.linkedin.com/in/anurag-mishra-b25733340/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: theme.colors.accent.primary,
+                    textDecoration: "none",
+                    fontWeight: 600,
+                  }}
+                >
+                  linkedin.com/in/anurag-mishra-b25733340
+                </a>
               </div>
             </Card>
           </Reveal>
