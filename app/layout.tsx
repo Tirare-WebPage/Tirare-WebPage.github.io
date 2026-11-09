@@ -1,120 +1,32 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-import "@/app/globals.css";
-
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-
-const geistSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Tirare Mobility Technologies",
-    template: "%s | Tirare Mobility Technologies",
-  },
-
+  title: "Anurag Mishra — Founder, Tirare | Mechanical Design & Research",
   description:
-    "Engineering retrofit systems that preserve existing cargo tricycles while introducing practical electric torque assistance.",
-
-  applicationName: "Tirare Mobility Technologies",
-
-  keywords: [
-    "Tirare",
-    "Mobility",
-    "Cargo Tricycle",
-    "Retrofit",
-    "Electric Assist",
-    "Engineering",
-    "Urban Mobility",
-    "Mechanical Engineering",
-    "India",
-  ],
-
-  authors: [
-    {
-      name: "Tirare Mobility Technologies",
-    },
-  ],
-
-  creator: "Tirare Mobility Technologies",
-
-  publisher: "Tirare Mobility Technologies",
-
-  metadataBase: new URL("https://tirare.tech"),
-
+    "Personal portfolio of Anurag Mishra: founder of Tirare and developer of MRII, a mechanical rider-intent interface for cargo-tricycle electric retrofits. Mechanical design, research, robotics, competitions and independent work.",
+  applicationName: "Anurag Mishra Portfolio",
   openGraph: {
-    title: "Tirare Mobility Technologies",
-
+    title: "Anurag Mishra — Founder, Tirare | Mechanical Design & Research",
     description:
-      "Engineering retrofit systems for cargo mobility.",
-
-    url: "https://tirare.tech",
-
-    siteName: "Tirare Mobility Technologies",
-
-    locale: "en_US",
-
+      "The work of Anurag Mishra: Tirare mobility, MRII mechanical interface research, design development, robotics, competitions and independent initiatives.",
     type: "website",
   },
-
-  twitter: {
-    card: "summary_large_image",
-
-    title: "Tirare Mobility Technologies",
-
-    description:
-      "Engineering retrofit systems for cargo mobility.",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: `${publicBasePath}/favicon.svg` },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0B0D0F",
-  colorScheme: "dark",
+  themeColor: "#171a17",
   width: "device-width",
   initialScale: 1,
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function RootLayout({
-  children,
-}: RootLayoutProps) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-    >
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-      >
-        <Navbar />
-
-        <main>
-          {children}
-        </main>
-
-        <Footer />
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
